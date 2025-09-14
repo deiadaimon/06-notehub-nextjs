@@ -47,7 +47,7 @@ export const deleteNote = async (id: string): Promise<Note> => {
     return response.data;
 };
 
-const fetchNotebyId = async (id: string): Promise<Note> => {
+export const fetchNoteById = async (id: string): Promise<Note> => {
     const config = {
         headers: { Authorization: `Bearer ${KEY}` },
     };
@@ -58,5 +58,3 @@ const fetchNotebyId = async (id: string): Promise<Note> => {
     );
     return response.data;
 };
-
-export default fetchNotebyId;
